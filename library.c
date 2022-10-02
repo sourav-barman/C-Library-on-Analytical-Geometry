@@ -1,10 +1,17 @@
 #include "library.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #define PI 3.14159265
 
 double find_angle(double a1, double b1, double a2, double b2) 
 {
     double m1, m2, angle, theta, degree;
+
+    if (b1 == 0 || b2 == 0) {
+        printf("\nDivide By Zero Exception");
+        exit(0);
+    }
 
     m1 = -(a1 / b1);
     m2 = -(a2 / b2);
